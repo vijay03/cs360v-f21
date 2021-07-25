@@ -41,8 +41,8 @@ Office hours: TBD
 
 ### Grading 
 
-**25%** Midterm 1
-**25%** Midterm 2
+**25%** Midterm 1 <br>
+**25%** Midterm 2 <br>
 
 **25%** Project: modifying a hypervisor <br>
 **25%** Project: contributing to an open-source repository related to virtualization <br>
