@@ -3,7 +3,7 @@ In this lab, you will implement a few features to become familar with the enviro
 
 Throughout these labs, you will gradually build all of the pieces required to build a hypervisor. Hypervisors provide the means of running multiple OSes managed by just one entity, a single machine. We must make sure our hypervisor does several things, such as provide OS-level isolation for users and allocating and switching out resources efficiently. 
 
-You will use the JOS operating system running on QEMU for this project. Check the [tools page](https://github.com/vijay03/cs360v-f20/blob/master/tools.md) for an overview on JOS and useful commands of QEMU. You will work on them over the next 3 or 4 lab assignments and at the end, you will launch a JOS-in-JOS environment. You will cover many tasks, such as interfacing with the hardware with system calls, handling vmexits (similar to a context switch), and mapping the bootloader in memory.  
+You will use the JOS operating system running on QEMU for this project. Check the [tools page](https://github.com/vijay03/cs360v-f21/blob/master/tools.md) for an overview on JOS and useful commands of QEMU. You will work on them over the next 3 or 4 lab assignments and at the end, you will launch a JOS-in-JOS environment. You will cover many tasks, such as interfacing with the hardware with system calls, handling vmexits (similar to a context switch), and mapping the bootloader in memory.  
 
 ### Background
 
@@ -57,7 +57,7 @@ $ make run-vmm-nox
 
 Next, we will start gdb. We will be using GDB a lot throughout these labs. It is an indispensible tool for systems programming and debugging. This lab will help introduce you to it. Here is a helpful reference sheet for [GDB commands](https://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
 
-GDB should already be set up for you, but if you want to use a different machine, here is a way to set up GDB for the JOS computers. [GDB setup](https://github.com/vijay03/cs360v-f20/blob/master/tools.md). 
+GDB should already be set up for you, but if you want to use a different machine, here is a way to set up GDB for the JOS computers. [GDB setup](https://github.com/vijay03/cs360v-f21/blob/master/tools.md). 
 
 To start gdb, simply type 
 ```
