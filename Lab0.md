@@ -170,9 +170,8 @@ In all lab assignments in project-1, the functions you will be implementing migh
 
 ## Submission Details
 
-Submissions will be handled through gitolite.
-Commits made until midnight on the day of the submission deadline will be used for grading.
+Submit a zip of your files via Canvas. If you have changed the directory structure, add a README explaining where we can find your code.
 
 ## Contact Details
 
-Reach out to the TAs in case of any difficulties.
+Reach out to the TA in case of any difficulties.
