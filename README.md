@@ -89,8 +89,13 @@ https://ebookcentral-proquest-com.ezproxy.lib.utexas.edu/lib/utxa/detail.action?
 
 ### Deadlines (tentative)
 
+**Aug 26** First class <br>
+**Sep 9** Lab 0 due <br>
+**Sep 23** Lab 1 due <b>
 **Oct 5** Midterm 1 <br>
-**Oct 28** Project 1 due <br>
+**Oct 7** Lab 2 due <br>
+**Oct 21** Lab 3 due <br>
+**Nov 4** Lab 4 due <br>
 **Dec 2** Midterm 2 <br>
 **Dec 12** Report due about open-source contributions <br>
 
