@@ -3,17 +3,17 @@ In this lab, you will implement a few features to become familar with the enviro
 
 Throughout these labs, you will gradually build all of the pieces required to build a hypervisor. Hypervisors provide the means of running multiple OSes managed by just one entity, a single machine. We must make sure our hypervisor does several things, such as provide OS-level isolation for users and allocating and switching out resources efficiently. 
 
-You will use the JOS operating system running on QEMU for this project. Check the [tools page](https://github.com/vijay03/cs360v-f21/blob/master/tools.md) for an overview on JOS and useful commands of QEMU. You will work on them over the next 3 or 4 lab assignments and at the end, you will launch a JOS-in-JOS environment. You will cover many tasks, such as interfacing with the hardware with system calls, handling vmexits (similar to a context switch), and mapping the bootloader in memory.  
+You will use the JOS operating system running on QEMU for this project. Check the [tools page](https://github.com/vijay03/cs360v-f21/blob/main/tools.md) for an overview on JOS and useful commands of QEMU. You will work on them over the next 3 or 4 lab assignments and at the end, you will launch a JOS-in-JOS environment. You will cover many tasks, such as interfacing with the hardware with system calls, handling vmexits (similar to a context switch), and mapping the bootloader in memory.  
 
 ### Background
 
 This README series contains some background related to project-1. Reading this document will help you understand the pieces you will be implementing on a high level as you work on project-1.
 
 The README series is broken down into 4 parts:
-1. [Bootloader and Kernel](https://github.com/vijay03/cs360v-f21/blob/master/bootloader.md) which will help you in the understanding first part of the project, namely what happens when you boot up your PC (in our case, create or boot the guest).
-2. [Virtual Memory](https://github.com/vijay03/cs360v-f21/blob/master/virtual_memory.md) which will help you in understanding the second part - where we transfer the multiboot structure from the host to the guest, for the guest to understand how much memory it is allocated and how much it can use. This part also contains details about segmentation and paging, which are a good background for the project in general.
-3. [Environments](https://github.com/vijay03/cs360v-f21/blob/master/environments.md) which will help you in understanding what exactly is an environment, and some details about the environment structure which is used in sys_ept_map() and the trapframe structure.
-4. [File System](https://github.com/vijay03/cs360v-f21/blob/master/file_system.md) which will help you in understanding the second part of the lab, where we handle vmcalls related to reading and writing of data to a disk.
+1. [Bootloader and Kernel](https://github.com/vijay03/cs360v-f21/blob/main/bootloader.md) which will help you in the understanding first part of the project, namely what happens when you boot up your PC (in our case, create or boot the guest).
+2. [Virtual Memory](https://github.com/vijay03/cs360v-f21/blob/main/virtual_memory.md) which will help you in understanding the second part - where we transfer the multiboot structure from the host to the guest, for the guest to understand how much memory it is allocated and how much it can use. This part also contains details about segmentation and paging, which are a good background for the project in general.
+3. [Environments](https://github.com/vijay03/cs360v-f21/blob/main/environments.md) which will help you in understanding what exactly is an environment, and some details about the environment structure which is used in sys_ept_map() and the trapframe structure.
+4. [File System](https://github.com/vijay03/cs360v-f21/blob/main/file_system.md) which will help you in understanding the second part of the lab, where we handle vmcalls related to reading and writing of data to a disk.
 
 ## Part-1 Setup and Getting Started
 
@@ -57,7 +57,7 @@ $ make run-vmm-nox
 
 Next, we will start gdb. We will be using GDB a lot throughout these labs. It is an indispensible tool for systems programming and debugging. This lab will help introduce you to it. Here is a helpful reference sheet for [GDB commands](https://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
 
-GDB should already be set up for you, but if you want to use a different machine, here is a way to set up GDB for the JOS computers. [GDB setup](https://github.com/vijay03/cs360v-f21/blob/master/tools.md). 
+GDB should already be set up for you, but if you want to use a different machine, here is a way to set up GDB for the JOS computers. [GDB setup](https://github.com/vijay03/cs360v-f21/blob/main/tools.md). 
 
 To start gdb, simply type 
 ```
@@ -147,7 +147,7 @@ NOTE: All Lab 0 hints are in the codebase `Hint, Lab 0`. It is important to visi
 
 In JOS the terms "environment" and "process" are interchangeable - they roughly have the same meaning. We introduce the term "environment" instead of the traditional term "process" in order to stress the point that JOS environments do not provide the same semantics as UNIX processes, even though they are roughly comparable.
 
-[This guide](https://github.com/vijay03/cs360v-f21/blob/master/environments.md), linked at the beginning of the project, provides an in depth introduction into environments. 
+[This guide](https://github.com/vijay03/cs360v-f21/blob/main/environments.md), linked at the beginning of the project, provides an in depth introduction into environments. 
 
 In this part of the project, we want to be able to keep track of number of times environment has run, as an important piece of metadata. Add a new field to the struct declaration of `Env` called `env_runs` in order to track this information. 
 
