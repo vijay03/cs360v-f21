@@ -74,7 +74,7 @@ https://ebookcentral-proquest-com.ezproxy.lib.utexas.edu/lib/utxa/detail.action?
 <p>The first project will involve modifying an existing
   hypervisor to add certain features. You will need to know the basics of operating systems,
   C, and assembly to complete this project. README for project one, lab-1:
-  https://github.com/vijay03/cs360v-f21/blob/master/Lab1.md </p>
+  https://github.com/vijay03/cs360v-f21/blob/main/Lab1.md </p>
 
 <p>The second project is open-ended, and will involve adding a new
   feature to any open-source project related to virtualization and
@@ -82,7 +82,7 @@ https://ebookcentral-proquest-com.ezproxy.lib.utexas.edu/lib/utxa/detail.action?
   proposal approved, and then present on what they did at the end of
   the semester. You are encouraged to add a useful feature to an
   open-source project (and potentially get it merged with the code
-  base). More details here: https://github.com/vijay03/cs360v-f21/blob/master/project-open-source.md. 
+  base). More details here: https://github.com/vijay03/cs360v-f21/blob/main/project-open-source.md. 
 </p>
 
 <p>More details about the projects will be added shortly.</p>
