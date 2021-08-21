@@ -13,9 +13,7 @@ The README series is broken down into 4 parts:
 4. [File System](https://github.com/vijay03/cs360v-f20/blob/master/file_system.md) which will help you in understanding the second part of the lab, where we handle vmcalls related to reading and writing of data to a disk.
 
 ## Lab-1
-```diff
-+ Deadline: TBA
-```
+Deadline: **Sep 9**
 
 ## Getting started 
 
