@@ -19,24 +19,26 @@ The README series is broken down into 4 parts:
 
 You will need to use your laptop for this project. Because the lab computers do not have easy root access, and we are trying to write a hypervisor, it is easiest to use a class VM for a standardized project experience. 
 
-
 For lab-0, you will use a virtual machine with the Debian Jessie operating system. Follow the instructions below for
 1. Setting up a VM and other essentials
 2. Running JOS code for project-1
 
+You need to use Virtual Machine software: VMWare Fusion [here for students](https://my.vmware.com/web/vmware/evalcenter?p=fusion-player-personal) or [Virtual Box](https://www.virtualbox.org/). 
+
+We are providing the virtual machine in two formats. You can use either for the class. 
+1. A zip file for a VirtualBox virtual machine. This has all the components required for the virtual machine to be run on Virtualbox. You will need to customize it to run correctly on your laptop. Link: https://utexas.box.com/s/nkwnzmqwnpo8m9jf1m4m82p351b4rb6o
+2. An OVA file: https://utexas.box.com/s/z2p0bz1z352rtg4zpwkv7l2hn9vnc81a. You must setup a VM using this OVA file.
+
 #### Setting up a Virtual Machine and Other Essentials
 
-1. Download the compressed [VM image] TBD (3.4 GB) on your personal laptops (with QEMU and KVM enabled). 
-
-2. Download a Virtual Machine software: VMWare Fusion [here for students](https://my.vmware.com/web/vmware/evalcenter?p=fusion-player-personal) or Virtual Box. 
-3. Load ova into whichever software you are using [link](https://help.okta.com/en/prod/Content/Topics/Access-Gateway/deploy-vmwareworkstation.htm)
-4.  Begin running VM. To log into the VM, you can use
+1. You need to setup networking on the virtual machine so that you can communicate with your host machine. This will involve setting up the host networking and providing a static IP to your virtual machine. See [this](https://marcus.4christies.com/2019/01/how-to-create-a-virtualbox-vm-with-a-static-ip-and-internet-access/) article. You might need to setup a second host-only networking adaptor on the virtual machine if you are using the OVA. 
+2.  Begin running VM. To log into the VM, you can use
 `
 username: osboxes
 password: user
 `
 
-5.  Run `ip addr` to retrieve the IP address of the machine. 
+5.  Run `ip addr` to retrieve the IP address of the machine. This will be the static IP address you set in step 1. 
 6.  Open a new terminal tab on your computer, and ssh into the machine. You can do this with `ssh -p 22 osboxes@IP_ADDRESS`
 7.  You can locate into the project folder now. It should be available on your VM, with the necessary libraries. 
 
