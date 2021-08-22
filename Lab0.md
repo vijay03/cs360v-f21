@@ -30,12 +30,11 @@ For lab-0, you will use a virtual machine with the Debian Jessie operating syste
 
 2. Download a Virtual Machine software: VMWare Fusion [here for students](https://my.vmware.com/web/vmware/evalcenter?p=fusion-player-personal) or Virtual Box. 
 3. Load ova into whichever software you are using [link](https://help.okta.com/en/prod/Content/Topics/Access-Gateway/deploy-vmwareworkstation.htm)
-4.  Begin running VM. To log into the VM, you can either use
-username: osboes
+4.  Begin running VM. To log into the VM, you can use
+`
+username: osboxes
 password: user
-
-username: root
-password: root
+`
 
 5.  Run `ip addr` to retrieve the IP address of the machine. 
 6.  Open a new terminal tab on your computer, and ssh into the machine. You can do this with `ssh -p 22 osboxes@IP_ADDRESS`
