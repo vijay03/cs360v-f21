@@ -31,6 +31,8 @@ We are providing the virtual machine in two formats. You can use either for the 
 
 To successfully run JOS inside the VM, you need to ensure that Virtualization hardware support (VMX) is enabled for the virtual machine, and KVM is installed in the virtual machine. Both these steps are done in the VirtualBox, but you will have to configure it yourself when using the OVA. 
 
+**Important**: You need to customize the networking on the virtual machine for your machine. Right now, it is configured to use a Bridged Adaptor connected to Vijay's Thunderbolt Ethernet. This should change based on your host machine to whatever network (wifi/ethernet) that you are using. You only need to change ``Adapter 1`` in the VM's networking settings. 
+
 #### Setting up a Virtual Machine and Other Essentials
 
 1. You need to setup networking on the virtual machine so that you can communicate with your host machine. This will involve setting up the host networking and providing a static IP to your virtual machine. See [this](https://marcus.4christies.com/2019/01/how-to-create-a-virtualbox-vm-with-a-static-ip-and-internet-access/) article. You might need to setup a second host-only networking adaptor on the virtual machine if you are using the OVA. This has **already** been setup on the VirtualBox VM, but you might need to change the Bridge Adaptor to use either wifi or ethernet in the Virtualbox VM settings. 
