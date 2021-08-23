@@ -29,9 +29,11 @@ We are providing the virtual machine in two formats. You can use either for the 
 1. A zip file for a VirtualBox virtual machine. This has all the components required for the virtual machine to be run on Virtualbox. You might need to customize it to run correctly on your laptop. Link: https://utexas.box.com/s/nkwnzmqwnpo8m9jf1m4m82p351b4rb6o. This has the host-only networking adaptor setup, but you have to use VirtualBox to run this virtual machine.
 2. An OVA file: https://utexas.box.com/s/z2p0bz1z352rtg4zpwkv7l2hn9vnc81a. You must setup a VM using this OVA file. You can use either VirtualBox or VMware Fusion. We are providing this OVA for compatibility, but it requires you to setup a lot of stuff that comes pre-configured on the VirtualBox. We strongly recommend using the VirtualBox VM. 
 
+To successfully run JOS inside the VM, you need to ensure that Virtualization hardware support (VMX) is enabled for the virtual machine, and KVM is installed in the virtual machine. Both these steps are done in the VirtualBox, but you will have to configure it yourself when using the OVA. 
+
 #### Setting up a Virtual Machine and Other Essentials
 
-1. You need to setup networking on the virtual machine so that you can communicate with your host machine. This will involve setting up the host networking and providing a static IP to your virtual machine. See [this](https://marcus.4christies.com/2019/01/how-to-create-a-virtualbox-vm-with-a-static-ip-and-internet-access/) article. You might need to setup a second host-only networking adaptor on the virtual machine if you are using the OVA. 
+1. You need to setup networking on the virtual machine so that you can communicate with your host machine. This will involve setting up the host networking and providing a static IP to your virtual machine. See [this](https://marcus.4christies.com/2019/01/how-to-create-a-virtualbox-vm-with-a-static-ip-and-internet-access/) article. You might need to setup a second host-only networking adaptor on the virtual machine if you are using the OVA. This has **already** been setup on the VirtualBox VM, but you might need to change the Bridge Adaptor to use either wifi or ethernet in the Virtualbox VM settings. 
 2.  Begin running VM. To log into the VM, you can use
 `
 username: osboxes
