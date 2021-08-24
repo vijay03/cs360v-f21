@@ -25,6 +25,8 @@ For lab-0, you will use a virtual machine with the Debian Jessie operating syste
 
 You need to use Virtual Machine software: VMWare Fusion [here for students](https://my.vmware.com/web/vmware/evalcenter?p=fusion-player-personal) or [Virtual Box](https://www.virtualbox.org/). We **strongly recommend** using VirtualBox, as this is what the instructors use. We would not be able to help you with problems running on VMware Fusion. 
 
+**Note**: You need to use Virtualbox 6.1. VirtualBox 6.0 does not have nested virtualization support needed for the lab.
+
 We are providing the virtual machine in two formats. You can use either for the class. 
 1. A zip file for a VirtualBox virtual machine. This has all the components required for the virtual machine to be run on Virtualbox. You might need to customize it to run correctly on your laptop. Link: https://utexas.box.com/s/nkwnzmqwnpo8m9jf1m4m82p351b4rb6o. This has the host-only networking adaptor setup, but you have to use VirtualBox to run this virtual machine.
 2. An OVA file: https://utexas.box.com/s/z2p0bz1z352rtg4zpwkv7l2hn9vnc81a. You must setup a VM using this OVA file. You can use either VirtualBox or VMware Fusion. We are providing this OVA for compatibility, but it requires you to setup a lot of stuff that comes pre-configured on the VirtualBox. We strongly recommend using the VirtualBox VM. 
