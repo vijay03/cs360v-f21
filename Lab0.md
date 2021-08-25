@@ -73,7 +73,9 @@ You can press ```Ctrl-A X``` to exit JOS.
 
 Next, we will start gdb. We will be using GDB a lot throughout these labs. It is an indispensible tool for systems programming and debugging. This lab will help introduce you to it. Here is a helpful reference sheet for [GDB commands](https://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
 
-GDB should already be set up for you, but if you want to use a different machine, here is a way to set up GDB for the JOS computers. [GDB setup](https://github.com/vijay03/cs360v-f21/blob/main/tools.md). 
+You need to use a **patched** version of GDB for the project. We have already set up gdb for you in the VM at `~/gdb_7.7/`. Please use this version of the GDB. You will get an error (`packet too long`) if you use the default GDB.
+
+Here is a way to set up GDB if you are not using the VM: [GDB setup](https://github.com/vijay03/cs360v-f21/blob/main/tools.md). 
 
 To start gdb, run
 ```
