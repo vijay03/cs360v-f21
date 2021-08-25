@@ -75,11 +75,11 @@ Next, we will start gdb. We will be using GDB a lot throughout these labs. It is
 
 GDB should already be set up for you, but if you want to use a different machine, here is a way to set up GDB for the JOS computers. [GDB setup](https://github.com/vijay03/cs360v-f21/blob/main/tools.md). 
 
-To start gdb, simply type 
+To start gdb, run
 ```
-gdb
+~/gdb_7.7/usr/bin/gdb
 ```
-In the command prompt. 
+in the command prompt. If the gdb_7.7 directory is not already on the VM, see [here](https://github.com/vijay03/cs360v-f20/blob/master/tools.md#patched-gdb) for instructions on installing it.
 
 Normally, you would specify the executable, but because this is a VM, for this lab, you have to use REMOTE DEBUGGING via GDB. Because of this, you will see the prompt (you do not have to type this) run:
 
