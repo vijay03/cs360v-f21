@@ -37,7 +37,7 @@ Office hours: 2-3 PM CST Friday, GDC 6.436
 
 Email: hleblanc@utexas.edu
 
-Office hours: TBD
+Office hours: Wed 4-5 PM on [Zoom](https://utexas.zoom.us/j/94632067817)
 
 ### Grading 
 
