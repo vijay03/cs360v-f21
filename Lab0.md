@@ -15,7 +15,7 @@ The README series is broken down into 4 parts:
 3. [Environments](https://github.com/vijay03/cs360v-f21/blob/main/environments.md) which will help you in understanding what exactly is an environment, and some details about the environment structure which is used in sys_ept_map() and the trapframe structure.
 4. [File System](https://github.com/vijay03/cs360v-f21/blob/main/file_system.md) which will help you in understanding the second part of the lab, where we handle vmcalls related to reading and writing of data to a disk.
 
-## Part-1 Setup and Getting Started
+## Part 1: Setup and Getting Started
 
 You will need to use your laptop for this project. Because the lab computers do not have easy root access, and we are trying to write a hypervisor, it is easiest to use a class VM for a standardized project experience. 
 
@@ -115,7 +115,7 @@ Hardware assisted breakpoint 1 at 0x1000e5: file kern/bootstrap.S, line 147.
 You can then proceed to continue the executable with c (continue) or stepi (executes next instruction)
 
 
-## Pre-lab Questions
+## Part 2: Pre-lab Questions
 
 To begin, we'd like you to get familar with using GDB. GDB is a great tool for debugging system level programs because it gives you the ability to see what is happening at a low level. 
 
@@ -162,7 +162,7 @@ That's it for the pre-lab! The next section will be on the coding section.
 
 Please include a .txt or PDF document of your answers with the codebase.  
 
-## Part-3 Coding Exercise 
+## Part 3: Coding Exercise 
 
 ### Track number of runs for an env
 
