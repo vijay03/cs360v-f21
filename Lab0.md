@@ -69,7 +69,7 @@ Welcome to the JOS kernel monitor!
 Type 'help' for a list of commands.
 
 ```
-You can press ```Ctrl-A X``` to exit JOS.
+To exit JOS press ```Ctrl-A``` followed by ```X```. 
 
 Next, we will start gdb. We will be using GDB a lot throughout these labs. It is an indispensible tool for systems programming and debugging. This lab will help introduce you to it. Here is a helpful reference sheet for [GDB commands](https://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
 
