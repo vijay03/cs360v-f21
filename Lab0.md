@@ -129,7 +129,7 @@ Now, when you continue execution with `c` in gdb, your new breakpoint will be hi
 
 Observe the register values, and note them down. You might want to take a look at this [blog post](https://arvindsraj.wordpress.com/2013/01/12/x86-registers-register-conventions-and-calling-conventions/) about registers.
 
-1. Which register contains the return value? What is the value you see? Is this an address or a constant value? 
+1. Which register contains the return value of the function? What is the value you see? Is this an address or a constant value? 
 
 2. Which register contains the next assembly instruction to execute? What is the value you see? Is this an address or a constant value? 
 
