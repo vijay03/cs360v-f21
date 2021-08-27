@@ -90,13 +90,14 @@ target remote localhost:25000
 ```
 It will appear like the command is hanging, but it is simply waiting for the process to start.
 
-In order to run JOS in GDB, there are specialized make commands in order to attach GDB to the process. Run 
+In order to run JOS in GDB, there are specialized make commands in order to attach GDB to the process. Run this on another terminal:
 
 ```
 make run-vmm-nox-gdb
 ```
+The terminal where you are running JOS with GDB will seem like its hanging. This is expected. It is waiting for input from GDB.
 
-After this, you should see 
+After this, you should see the following on the terminal running GDB:
 
 ```
 warning: A handler for the OS ABI "GNU/Linux" is not built into this configuration
