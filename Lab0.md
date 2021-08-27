@@ -44,9 +44,9 @@ username: osboxes
 password: user
 `
 
-5.  Run `ip addr` to retrieve the IP address of the machine. This will be the static IP address you set in step 1. 
+5.  Run `ip addr` to retrieve the IP address of the machine. This will be the static IP address you set in step 1. If you are using the VM we provided, it will be `192.168.56.101`
 6.  Open a new terminal tab on your computer, and ssh into the machine. You can do this with `ssh -p 22 osboxes@IP_ADDRESS`
-7.  You can locate into the project folder now. It should be available on your VM, with the necessary libraries. 
+7.  You can locate into the project folder `/home/osboxes/cs360v-f21/project-1` now. It should be available on your VM, with the necessary libraries. 
 
 #### Running JOS VMM
 
