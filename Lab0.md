@@ -67,7 +67,7 @@ kernel panic on CPU 0 at ../vmm/vmx.c:65: vmx_check_support not implemented
 
 Welcome to the JOS kernel monitor!
 Type 'help' for a list of commands.
-
+K>
 ```
 To exit JOS press ```Ctrl-A``` followed by ```X```. 
 
