@@ -125,6 +125,8 @@ This function restores the register values in the Trapframe with the 'iret' inst
 
 An IRET instruction returns from the OS to the application program which made the system call. The IRET also makes a change back to User Mode.
 
+Now, when you continue execution with `c` in gdb, your new breakpoint will be hit. You can now examine the registers with `info registers`. 
+
 Observe the register values, and note them down. 
 
 1. Which register contains the return value? What is the value you see? Is this an address or a constant value? 
