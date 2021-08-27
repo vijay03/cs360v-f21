@@ -83,10 +83,9 @@ To start gdb, run
 ```
 in the command prompt. If the gdb_7.7 directory is not already on the VM, see [here](https://github.com/vijay03/cs360v-f20/blob/master/tools.md#patched-gdb) for instructions on installing it.
 
-Normally, you would specify the executable, but because this is a VM, for this lab, you have to use REMOTE DEBUGGING via GDB. Because of this, you will see the prompt (you do not have to type this) run:
-
+Normally, you would specify the executable, but because this is a VM, for this lab, you have to use REMOTE DEBUGGING via GDB. Run this command on the gdb prompt:
 ```
-target remote localhost:25000
+(gdb) target remote localhost:25000
 ```
 It will appear like the command is hanging, but it is simply waiting for the process to start.
 
