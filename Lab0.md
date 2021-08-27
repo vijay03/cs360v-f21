@@ -79,9 +79,12 @@ Here is a way to set up GDB if you are not using the VM: [GDB setup](https://git
 
 To start gdb, run
 ```
+cd /home/osboxes/cs360v-f21/project-1
 ~/gdb_7.7/usr/bin/gdb
 ```
 in the command prompt. If the gdb_7.7 directory is not already on the VM, see [here](https://github.com/vijay03/cs360v-f20/blob/master/tools.md#patched-gdb) for instructions on installing it.
+
+Note: you get subtle errors if you use a different version of gdb or if you run it from a dir other than `project-1`. 
 
 Normally, you would specify the executable, but because this is a VM, for this lab, you have to use REMOTE DEBUGGING via GDB. Run this command on the gdb prompt:
 ```
