@@ -127,13 +127,13 @@ An IRET instruction returns from the OS to the application program which made th
 
 Now, when you continue execution with `c` in gdb, your new breakpoint will be hit. You can now examine the registers with `info registers`. 
 
-Observe the register values, and note them down. 
+Observe the register values, and note them down. You might want to take a look at this [blog post](https://arvindsraj.wordpress.com/2013/01/12/x86-registers-register-conventions-and-calling-conventions/) about registers.
 
 1. Which register contains the return value? What is the value you see? Is this an address or a constant value? 
 
 2. Which register contains the next assembly instruction to execute? What is the value you see? Is this an address or a constant value? 
 
-3. Using the answer from the previous question, what are the next 5 instructions that will be executed? What are the hex codes of those functions? 
+3. Using the answer from the previous question, what are the next 5 instructions that will be executed? What are the hex codes of those functions? (hint: see `display` in gdb)
 
 As you may notice, the function calls a c function `__asm __volatile()`. The asm statement allows you to include assembly instructions directly within C code. The `volatile` keyword simply tells the assembler not to optimize this instruction away. 
 
