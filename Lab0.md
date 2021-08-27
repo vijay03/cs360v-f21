@@ -148,7 +148,7 @@ push   %rbx
 sub    $0x18,%rsp
 ```
 
-5. Using the stepi functionality in GDB, which will execute one instruction at a time, what do the registers look like after this?
+5. Using the stepi functionality in GDB, which will execute one instruction at a time, what do the registers look like after the above instructions are executed?
 
 6. Now, if I were to call this instruction:
 
