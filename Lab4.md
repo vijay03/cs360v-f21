@@ -1,6 +1,10 @@
 ## Handling VM exits - part 2
 In the last lab we implemented the memory map portion of `handle_vmcall()`. Now we will handle the other 2 cases. 
 
+```diff
+Deadline: Tue Oct 26
+```
+
 #### Part-1 Pre-lab 
 1. An easy way we can help prevent code duplication is by using macros in functions. In many of the hypercalls we have in JOS, we need to differentiate when we are running in the guest or host. Give an example of a C program that adds up all the numbers in an array when the macro is set, and multiplies them when the macro is not set. 
 2. Read through the explanation of the file system [here](https://github.com/vijay03/cs360v-f20/blob/master/file_system.md). As you may read, in order to create access for the guests into the file_system, we must abstract RPC calls on top of the JOS's IPC mechanism. (Something that goes over an RPC call. Maybe runs a little python script to demonstrate the concept and bring that back to how the file system runs with host read and write. WIP) 
@@ -45,4 +49,5 @@ This marks the end of project-1.
 Please submit your code via gitolite. To mark your submission, please have a commit labelled "Lab 4 submission. 0/1/.. slip days used.". You can modify and add a dummy file for this commit if you want. We will consider the last such commit for evaluation. The deadline for lab-4 of project-1 is:
 
 ```diff
+Deadline: Tue Oct 26
 ```
