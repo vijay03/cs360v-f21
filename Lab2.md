@@ -6,6 +6,8 @@ You will also familiarize yourself with the assembly code that helps launch/resu
 
 Before beginning this lab assignment, read [bootloader.md](https://github.com/vijay03/cs360v-f20/blob/master/bootloader.md).
 
+Deadline: **Sep 30**
+
 ### Mapping in the guest bootloader and kernel
 
 In user/vmm.c we have provided the structure of the code to set up the guest and bootloader.
@@ -121,5 +123,5 @@ Unhandled VMEXIT, aborting guest.
 ### Submission and Deadline
 
 Please submit your code for part-1 and part-2.
-The deadline for lab-2 of project-1 is: 
+The deadline for lab-2 of project-1 is **Sep 30**. 
 
