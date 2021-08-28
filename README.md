@@ -31,7 +31,7 @@ Aside from teaching you the concepts behind virtualization, this course is meant
 
 Email: vijayc@utexas.edu
 
-Office hours: 2-3 PM CST Friday, GDC 6.436
+Office hours: Fri 2-3 PM CST on [Zoom](https://utexas.zoom.us/j/91885607738)
 
 **TA: [Hayley LeBlanc](https://www.cs.utexas.edu/~hleblanc/)**
 
