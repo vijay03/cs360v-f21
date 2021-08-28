@@ -6,6 +6,10 @@ Similar to issuing a system call (e.g., using the int or syscall instruction), a
 
 Complete the implementation of `vmexit()` by identifying the reason for the exit from the VMCS. You may need to search Chapter 27 of the [Intel manual](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf) to solve this part of the exercise.
 
+```diff
+Deadline: Thursday Oct 14
+```
+
 #### Part-2 Pre-lab Questions
 1. Name 3 different events that might cause a vmexit. You can look through some of the reasons in `vmm/vmx.c`, but it may be easier to reason this from your knowledge of operating systems and virtual machines 
 2. What overhead costs exist when you do a VM exit?
@@ -59,5 +63,5 @@ Implement `handle_cpuid()` in vmm/vmexits.c. `handle_cpuid()` should emulate a c
 Please submit your code for part-1 and part-2 via gitolite. To mark your submission, please have a commit labelled "Lab 3 submission. 0/1/.. slip days used.". You can modify and add a dummy file for this commit if you want. We will consider the last such commit for evaluation. The deadline for lab-3 of project-1 is:
 
 ```diff
-Deadline: TBD
+Deadline: Thursday Oct 14
 ```
