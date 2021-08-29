@@ -172,11 +172,13 @@ In JOS the terms "environment" and "process" are interchangeable - they roughly 
 
 [This guide](https://github.com/vijay03/cs360v-f21/blob/main/environments.md), linked at the beginning of the project, provides an in depth introduction into environments. 
 
-In this part of the project, we want to be able to keep track of number of times environment has run, as an important piece of metadata. Add a new field to the struct declaration of `Env` called `env_runs` in order to track this information. 
+In this part of the project, we want to be able to keep track of number of times environment has run, as an important piece of metadata. 
 
-Again, check all of the `Hint, Lab 0` places to update and use the `env_runs` variable!!
+We have added a new field to the struct declaration of `Env` called `env_runs` in order to track this information. Your task is to ensure `env_runs` is updated correctly.
 
-### Fix implementation of envid2env() in inc/env.c
+Again, check all of the `Hint, Lab 0` places to update and use the `env_runs` variable!
+
+### Fix implementation of envid2env() in kern/env.c
 
 Throughout these Labs in project_1, you will have to use a helper function, envid2env, to retrieve the Env struct, that contains metadata about an environment. 
 
