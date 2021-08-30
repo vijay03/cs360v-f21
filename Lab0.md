@@ -69,7 +69,7 @@ Welcome to the JOS kernel monitor!
 Type 'help' for a list of commands.
 K>
 ```
-To exit JOS press ```Ctrl-A``` followed by ```X```. 
+To exit JOS press ```Ctrl-A``` followed by ```X```. Press ``Ctrl`` and ``A`` at the same time, release, then press ``X``.
 
 Next, we will start gdb. We will be using GDB a lot throughout these labs. It is an indispensible tool for systems programming and debugging. This lab will help introduce you to it. Here is a helpful reference sheet for [GDB commands](https://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
 
@@ -127,7 +127,7 @@ An IRET instruction returns from the OS to the application program which made th
 
 Now, when you continue execution with `c` in gdb, your new breakpoint will be hit. You can now examine the registers with `info registers`. 
 
-Observe the register values, and note them down. You might want to take a look at this [blog post](https://arvindsraj.wordpress.com/2013/01/12/x86-registers-register-conventions-and-calling-conventions/) about registers.
+Observe the register values, and note them down. You might want to take a look at this [blog post](https://arvindsraj.wordpress.com/2013/01/12/x86-registers-register-conventions-and-calling-conventions/) about registers. For more background on x86 assembly, check out Lecture [10](https://web.stanford.edu/class/archive/cs/cs107/cs107.1218/lectures/10/Lecture10.pdf) and following lectures in the [Stanford Computer Organization class](https://web.stanford.edu/class/cs107/).
 
 1. Which register contains the return value of the function? What is the value you see? Is this an address or a constant value? 
 
