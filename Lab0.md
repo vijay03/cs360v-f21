@@ -35,9 +35,15 @@ To successfully run JOS inside the VM, you need to ensure that Virtualization ha
 
 **Important**: You need to customize the networking on the virtual machine for your machine. Right now, it is configured to use a Bridged Adaptor connected to Vijay's Thunderbolt Ethernet. This should change based on your host machine to whatever network (wifi/ethernet) that you are using. You only need to change ``Adapter 1`` in the VM's networking settings. Either ``NAT`` or ``Bridged`` setting should allow you to get internet access in the VM.
 
+#### Setting up networking in the Virtualbox VM
+
+The VirtualBox VM we provide has two network adaptors. Adaptor 1 is for connecting the VM to the internet. It is a `bridged` adaptor. You should set this to either `NAT` or `bridged` depending upon your host networking. 
+
+Adaptor 2 is used to connect the host and the VM. You need this to work to `ssh` into the VM from the host. It uses a `host-only` network adaptor. You need to configure Virtualbox to setup a host-only network (typically `vboxnet0`) and then connect it to the host-only adaptor used in the VM. See instructions [here](https://condor.depaul.edu/glancast/443class/docs/vbox_host-only_setup.html). 
+
 #### Setting up a Virtual Machine and Other Essentials
 
-1. You need to setup networking on the virtual machine so that you can communicate with your host machine. This will involve setting up the host networking and providing a static IP to your virtual machine. See [this](https://marcus.4christies.com/2019/01/how-to-create-a-virtualbox-vm-with-a-static-ip-and-internet-access/) article. You might need to setup a second host-only networking adaptor on the virtual machine if you are using the OVA. This has **already** been setup on the VirtualBox VM, but you might need to change the Bridge Adaptor to use either wifi or ethernet in the Virtualbox VM settings. 
+1. If you are not using the VM we provide, you need to setup networking on the virtual machine so that you can communicate with your host machine. This will involve setting up the host networking and providing a static IP to your virtual machine. See [this](https://marcus.4christies.com/2019/01/how-to-create-a-virtualbox-vm-with-a-static-ip-and-internet-access/) article. You might need to setup a second host-only networking adaptor on the virtual machine if you are using the OVA. 
 2.  Begin running VM. To log into the VM, you can use
 `
 username: osboxes
