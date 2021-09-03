@@ -39,7 +39,7 @@ There is a reference in each Env struct for another struct called VmxGuestInfo.
 
 5. What kind of information does this struct hold? 
 
-6. From the Intel guide, find out what the vmcs pointer in this struct stands for, and what it purpose it serves. 
+6. From [this Intel guide](https://www.cs.utexas.edu/~vijay/cs378-f17/projects/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf), find out what the vmcs pointer in this struct stands for, and what it purpose it serves. 
 
 7. What assembly instruction initializes the vmcs pointer? 
 
