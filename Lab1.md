@@ -27,7 +27,7 @@ The first thing you should do is look through the helper functions in `inc/x86.h
 
 The first method you will be editing is `vmx_check_support()` in `vmm/vmx.c`. The function currently calls the `cpuid` function. The parameters to the function are the addresses of the integers initialized in the line before. Set a breakpoint at the `cpuid()`function call, and step through the function. 
 
-1. What does the `cpuid()` assembly instruction do in this function? 
+1. What does the `cpuid` assembly instruction do in this function? 
 
 2. How is the function providing values back to you to use? 
 
