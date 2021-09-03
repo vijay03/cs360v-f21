@@ -159,10 +159,12 @@ sub    $0x18,%rsp
 6. If you continue to step through the execution, you will hit this instruction:
 
 ```
-movq %0, %%rsp
+movq 0, %rsp
 ```
 
-What is this instruction doing? Why might this throw an error?
+What is this instruction doing? Why might this throw an error the next time ``rsp`` is used? GDB will warn about this, but you won't get an actual error when the program is run, because `rsp` is overwritten by the `POPA` instruction (overwrites all registers with values from the stack). 
+
+Try removing the `POPA` instruction after this in `kern/env.c` and see what happens.
 
 That's it for the pre-lab! The next section will be on the coding section. 
 
