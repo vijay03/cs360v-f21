@@ -159,10 +159,10 @@ sub    $0x18,%rsp
 6. If you continue to step through the execution, you will hit this instruction:
 
 ```
-movq %0, %rsp
+movq %0, %%rsp
 ```
 
-Why does this throw an error?
+What is this instruction doing? Why might this throw an error?
 
 That's it for the pre-lab! The next section will be on the coding section. 
 
