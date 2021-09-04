@@ -33,7 +33,7 @@ The first method you will be editing is `vmx_check_support()` in `vmm/vmx.c`. Th
 
 3. What are the results of eax, ecx, and ebx values in hexadecimal? Hint: [you can print program variables from GDB](https://sourceware.org/gdb/current/onlinedocs/gdb/Variables.html)
 
-4. Change the info value to 0, and output the return values out as a string instead of as integers. Hint: interpret the values as hexadecimal values, and then convert them to a string, in the order `ebx, ecx, edx`. What do you observe? 
+4. Now examine the values of these variables as strings. Hint: look at the values in hexadecimal and translate them to strings, in the order `ebx, ecx, edx`. What do you observe? The [Wikipedia page](https://en.wikipedia.org/wiki/CPUID) for the `cpuid` instruction may help you interpret this output.
 
 There is a reference in each Env struct for another struct called VmxGuestInfo. 
 
@@ -70,7 +70,7 @@ The vmm directory includes the kernel-level support needed for the VMM--primaril
 
 #### Checking Support for VMX and Extended Paging
 
-Your first task will be to implement detection that the CPU supports vmx and extended paging. Remember the output that you checked from the cpuid instruction in Part 1. You now will interpret those values you noted down to check whether the CPU supports vmx and extended paging. To understand how to implement the checks for the vmx and extended paging support, read Chapters 23.6, 24.6.2, and Appendices A.3.2-3 from the [Intel Manual](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf).
+Your first task will be to implement detection that the CPU supports vmx and extended paging. Remember the output that you checked from the cpuid instruction in Part 1. You now will interpret those values you noted down to check whether the CPU supports vmx and extended paging. To understand how to implement the checks for the vmx and extended paging support, read Chapters 23.6, 24.6.2, and Appendices A.3.2-3 from the [Intel Manual](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf). Chapter 1 of [this other manual](https://www.intel.com/content/www/us/en/architecture-and-technology/64-ia-32-architectures-software-developer-vol-3a-part-1-manual.html) provides some information about how to read Intel manuals that may be helpful.
 
 Once you have read these sections, you will understand how to check support for vmx and extended paging. Now, implement the vmx_check_support() and vmx_check_ept() functions in vmm/vmx.c. Please read the hints above these functions to spot code that is already provided, for example, to read MSRs.
 
