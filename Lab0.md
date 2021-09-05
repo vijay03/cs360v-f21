@@ -156,7 +156,7 @@ sub    $0x18,%rsp
 
 5. Using the stepi functionality in GDB, which will execute one instruction at a time, what do the registers look like after the above instructions are executed?
 
-6. If you continue to step through the execution, you will hit this instruction:
+<!-- 6. If you continue to step through the execution, you will hit this instruction:
 
 ```
 movq 0, %rsp
@@ -164,7 +164,9 @@ movq 0, %rsp
 
 What is this instruction doing? Why might this throw an error the next time ``rsp`` is used? GDB will warn about this, but you won't get an actual error when the program is run, because `rsp` is overwritten by the `POPA` instruction (overwrites all registers with values from the stack). 
 
-Try removing the `POPA` instruction after this in `kern/env.c` and see what happens.
+Try removing the `POPA` instruction after this in `kern/env.c` and see what happens. -->
+
+6. Notice that the first line of assembly in the `__asm__volatile()` call is `movq %0,%%rsp`. If you were to change this line to `movq $0,%%rsp` (notice the $), you would see an error in GDB the next time `rsp` is used. Why would this change introduce an error? 
 
 That's it for the pre-lab! The next section will be on the coding section. 
 
