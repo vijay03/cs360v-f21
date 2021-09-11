@@ -1,0 +1,1 @@
+-m elf_x86_64 -z max-page-size=0x1000 --print-gc-sections -T kern/guest_kernel.ld  -nostdlib --no-gc-sections --print-gc-sections -Map=vivek.map
