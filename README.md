@@ -1,6 +1,6 @@
-## CS 360V Virtualization (Fall 2020)
+## CS 360V Virtualization (Fall 2021)
 
-Welcome to CS 378 Virtualization for undergrads. This is a course designed to expose undergraduate students to the latest in virtualization technologies such as virtual machines, containers, serverless, etc. The course also has two significant project components to be completed over the course of the semester.
+Welcome to CS 360V Virtualization for undergrads. This is a course designed to expose undergraduate students to the latest in virtualization technologies such as virtual machines, containers, serverless, etc. The course also has two significant project components to be completed over the course of the semester.
 
  This course will introduce students to
   a range of exciting topics including:
@@ -14,41 +14,39 @@ Welcome to CS 378 Virtualization for undergrads. This is a course designed to ex
     <li>Hardware Features Assisting Virtualization</li>
     <li>Deploying Virtual Machines</li>
     <li>Orchestrating Containers</li>
-    <li>Datacenters and Virtualization</li>
+     <li>How serverless works</li>
   </ul>
 
 Aside from teaching you the concepts behind virtualization, this course is meant to get you familiar with the commonly used tools and software. You should get used to using virtual machines, and containers. You will gain more experience with Git, and with real-world code bases.
 
-**Piazza Link: [piazza.com/utexas/fall2020/cs360v](https://piazza.com/utexas/fall2020/cs360v)** 
+**Piazza Link: [piazza.com/utexas/fall2021/cs360v](https://piazza.com/utexas/fall2021/cs360v)** 
 
-**Canvas Link: [https://utexas.instructure.com/courses/1290530](https://utexas.instructure.com/courses/1290530)** 
+**Canvas Link: [https://utexas.instructure.com/courses/1311673](https://utexas.instructure.com/courses/1311673)** 
 
-**Class Timing and Location**: TuTh 2 pm - 3:30pm on **[Zoom](https://utexas.zoom.us/j/98279961506)**
+**Class Timing and Location**: TuTh 2 pm - 3:30pm at GDC 5.302
 
-**[Schedule](https://github.com/vijay03/cs360v-f20/blob/master/schedule.md)**
+**[Schedule](https://docs.google.com/spreadsheets/d/1TfPkXzGmVUH7mMes5OzxYzTcYGk47QpXV2wNjSGE6R8/edit?usp=sharing)**
+(See [here](https://github.com/vijay03/cs360v-f20/blob/master/schedule.md) for notes)
 
 **Instructor: [Vijay Chidambaram](https://www.cs.utexas.edu/~vijay/)**
 
 Email: vijayc@utexas.edu
 
-Office hours: 2-3 PM CST Friday, **[Zoom](https://utexas.zoom.us/j/93495500868)**
+Office hours: Fri 2-3 PM CST on [Zoom](https://utexas.zoom.us/j/91885607738)
 
-**TA: [Soujanya Ponnapalli](https://www.cs.utexas.edu/~soujanya/)**
+**TA: [Hayley LeBlanc](https://www.cs.utexas.edu/~hleblanc/)**
 
-Email: soujanya@cs.utexas.edu
+Email: hleblanc@utexas.edu
 
-Office hours: Monday 5-6 PM CST, **[Zoom](https://utexas.zoom.us/j/96718513620)**
-
-**TA: [Aashaka Shah](https://aashaka.github.io/)**
-
-Email: aashaka@cs.utexas.edu
-
-Office hours: Wednesday ~~5-6 PM~~ 10-11 AM CST, **[Zoom](https://utexas.zoom.us/j/96718513620)** 
+Office hours: Wed 4-5 PM on [Zoom](https://utexas.zoom.us/j/94632067817)
 
 ### Grading 
 
-**50%** Project: implementing your own hypervisor <br>
-**50%** Project: contributing to an open-source repository related to virtualization <br>
+**25%** Midterm 1 <br>
+**25%** Midterm 2 <br>
+
+**25%** Project: modifying a hypervisor <br>
+**25%** Project: contributing to an open-source repository related to virtualization <br>
 
 ### Extra Credit
 
@@ -58,10 +56,6 @@ You can earn upto **1%** extra credit if your patches get accepted to any open-s
 **0.5%**: This needs to be a more substantial patch, requiring technical thought and care. 
 
 Note that these extra-credit activities will also serve you well in hunting for jobs or internships: getting a patch accepted in a project is impressive.
-
-### Quizzes
-
-There will be ungraded quizzes throughout the course to cement your understanding of the material.
 
 ### Reading
 
@@ -76,12 +70,12 @@ https://ebookcentral-proquest-com.ezproxy.lib.utexas.edu/lib/utxa/detail.action?
 ### Projects
 
 <p>There will be two big projects in the course. Students will work in
-  groups of two or three for both projects.</p>
+  groups of two or three for both projects. Students can have different teams for each project.</p>
 
-<p>The first project will involve building parts of your own
-  hypervisor. You will need to know the basics of operating systems,
-  C, and assembly to complete this project. README for project one, lab-1:
-  https://github.com/vijay03/cs360v-f20/blob/master/Project1.md </p>
+<p>The first project will involve modifying an existing
+  hypervisor to add certain features. You will need to know the basics of operating systems,
+  C, and assembly to complete this project. You can start seting up the project here: Lab 0, 
+  https://github.com/vijay03/cs360v-f21/blob/main/Lab0.md </p>
 
 <p>The second project is open-ended, and will involve adding a new
   feature to any open-source project related to virtualization and
@@ -89,15 +83,21 @@ https://ebookcentral-proquest-com.ezproxy.lib.utexas.edu/lib/utxa/detail.action?
   proposal approved, and then present on what they did at the end of
   the semester. You are encouraged to add a useful feature to an
   open-source project (and potentially get it merged with the code
-  base). More details here: https://github.com/vijay03/cs360v-f20/blob/master/project-open-source.md. 
+  base). More details here: https://github.com/vijay03/cs360v-f21/blob/main/project-open-source.md. 
 </p>
 
 <p>More details about the projects will be added shortly.</p>
 
 ### Deadlines (tentative)
 
-**Oct 25** Project 1 due <br>
-**Dec 3-5** In-class presentations about open-source contributions <br>
+**Aug 26** First class <br>
+**Sep 9** Lab 0 due <br>
+**Sep 21** Lab 1 due <br>
+**Oct 5** Midterm 1 <br>
+**Sep 30** Lab 2 due <br>
+**Oct 14** Lab 3 due <br>
+**Oct 26** Lab 4 due <br>
+**Dec 2** Midterm 2 <br>
 **Dec 12** Report due about open-source contributions <br>
 
 ### Course Policies
