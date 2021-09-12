@@ -17,7 +17,7 @@ Deadline: **Sep 21**
 
 ## Getting started 
 
-Your environment should be set up from Lab 0. We will making changes in the same codebase. If you did not recieve full marks for the previous lab, please reach out to the TA to get the correct implementation of the previous files.
+Your environment should be set up from Lab 0. We will making changes in the same codebase. If you did not recieve full points for the previous lab, please reach out to the TA to get the correct implementation of the previous files.
 
 ## Part-1 Pre-lab Questions 
 
