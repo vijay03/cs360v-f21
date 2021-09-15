@@ -203,10 +203,17 @@ Using env macros and information in inc/env.h and your knowledge of C references
 
 In all lab assignments in project-1, the functions you will be implementing might have hints on how to implement them as comments above. So please pay attention to the comments in the code.
 
+## Rubric
+
+Total points: 20
+
+6 Pre-lab questions: each 2 points (total of 12 points)
+Coding questions: 3 points, 3 points, and 2 points (total of 8 points)
+
 ## Submission Details
 
-Submit a zip of your files via Canvas. If you have changed the directory structure, add a README explaining where we can find your code.
+Submit a zip of your files via Canvas. If you have changed the directory structure, add a README explaining where we can find your code. Add a text file or a PDF file explaining your answers to the pre-lab questions.
 
 ## Contact Details
 
-Reach out to the TA in case of any difficulties.
+Reach out to the TA in case of any difficulties. You can post a public question on pizza: chances are, your fellow students have already seen it and can help you. If you want to share code with the TAs, use a private Piazza question.
