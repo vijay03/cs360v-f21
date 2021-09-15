@@ -13,7 +13,7 @@ The README series is broken down into 4 parts:
 4. [File System](https://github.com/vijay03/cs360v-f20/blob/master/file_system.md) which will help you in understanding the second part of the lab, where we handle vmcalls related to reading and writing of data to a disk.
 
 ## Lab-1
-Deadline: **Sep 21**
+Deadline: **Sep 21** for on-campus students, **Oct 3** for online masters students
 
 ## Getting started 
 
@@ -35,13 +35,11 @@ The first method you will be editing is `vmx_check_support()` in `vmm/vmx.c`. Th
 
 4. Now examine the values of these variables as strings. Hint: look at the values in hexadecimal and translate them to strings, in the order `ebx, ecx, edx`. What do you observe? The [Wikipedia page](https://en.wikipedia.org/wiki/CPUID) for the `cpuid` instruction may help you interpret this output.
 
-There is a reference in each Env struct for another struct called VmxGuestInfo. 
+5. There is a reference in each `Env` struct for another struct called `VmxGuestInfo`. What kind of information does this struct hold? 
 
-5. What kind of information does this struct hold? 
+6. From [this Intel guide](https://www.cs.utexas.edu/~vijay/cs378-f17/projects/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf), find out what the `vmcs` pointer in this struct stands for, and what it purpose it serves. 
 
-6. From [this Intel guide](https://www.cs.utexas.edu/~vijay/cs378-f17/projects/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf), find out what the vmcs pointer in this struct stands for, and what it purpose it serves. 
-
-7. What assembly instruction initializes the vmcs pointer? 
+7. What assembly instruction initializes the `vmcs` pointer? 
 
 ## Part-2 Coding Assignment (Making a Guest Environment)
 
@@ -76,7 +74,7 @@ Once you have read these sections, you will understand how to check support for 
 
 #### Running a Guest Environment
 
-Your second task will be to add support to sched_yield() in kern/sched.c to call vmxon() when launching a guest environment.
+Your second task will be to add support to `sched_yield()` in `kern/sched.c` to call `vmxon()` when launching a guest environment.
 
 If these functions are properly implemented, an attempt to start the VMM will not panic the kernel, but will fail because the vmm can't map guest bootloader and kernel into the VM. The error will look something like this:
 ```
@@ -89,9 +87,18 @@ In all lab assignments in project-1, the functions you will be implementing migh
 
 ## Submission Details
 
-Submissions will be handled through gitolite.
-Commits made until midnight on the day of the submission deadline will be used for grading.
+Submit a zip of your files via Canvas. If you have changed the directory structure, add a README explaining where we can find your code. Add a text file or a PDF file explaining your answers to the pre-lab questions. Optionally, you can add a text file explaining how you modified the code. 
+
+## Grading Rubric
+
+Total: 20 points
+
+Pre-lab questions: 1 point each (total 7 points)
+
+Checking support for vmx and extended paging: 7 points
+
+Calling VMXON: 6 points
 
 ## Contact Details
 
-Reach out to the TAs in case of any difficulties.
+Reach out to the TA in case of any difficulties. You can post a public question on pizza: chances are, your fellow students have already seen it and can help you. If you want to share code with the TAs, use a private Piazza question.
