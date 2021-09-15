@@ -101,4 +101,4 @@ Calling VMXON: 6 points
 
 ## Contact Details
 
-Reach out to the TA in case of any difficulties. You can post a public question on pizza: chances are, your fellow students have already seen it and can help you. If you want to share code with the TAs, use a private Piazza question.
+Reach out to the TA in case of any difficulties. You can post a public question on Piazza: chances are, your fellow students have already seen it and can help you. If you want to share code with the TAs, use a private Piazza question.
