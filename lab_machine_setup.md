@@ -15,6 +15,7 @@ You can use any of the following (gilligan) CS machines to complete projects for
 ```
 $ wget https://www.cs.utexas.edu/~vijay/teaching/project1.tar.gz
 ```
+The download may appear to stall or hang for a couple minutes after reaching 100%. You should wait until the terminal prompt returns, as cancelling the download at this point may corrupt the image.
 
 2. Now start up a VM that listens on a specific port using the following command. To avoid contention over ports, use `<port-id> = 5900 + <team-number>`. For example, if your group-id is 15, your port-id will be 5915.
 ```
