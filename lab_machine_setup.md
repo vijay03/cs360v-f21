@@ -11,11 +11,15 @@ You can use any of the following (gilligan) CS machines to complete projects for
 - the-professor
 - thurston-howell-iii
 
-1. Download the compressed [VM image](https://www.cs.utexas.edu/~vijay/teaching/project1.tar.gz) (3.4 GB) on one of the gilligan machines. The uncompressed VM image (8.8 GB) is available for download [here](http://www.cs.utexas.edu/~soujanya/project1-vm.qcow2). You can use `wget` to download an image over the command line:
+1. ssh into one of the gilligan machines. Take note of which one you are connected to; these setup steps are machine-specific and you will work off of this machine from now on. 
+
+2. Create a directory in /var/local/ on remote machine and set its permissions to 700. /var/local is a shared space, so make sure to give the directory a unique name that you can remember. 
+
+2. Download the compressed [VM image](https://www.cs.utexas.edu/~vijay/teaching/project1.tar.gz) (3.4 GB) into the directory you just created. The uncompressed VM image (8.8 GB) is available for download [here](http://www.cs.utexas.edu/~soujanya/project1-vm.qcow2). You can use `wget` to download an image over the command line:
 ```
 $ wget https://www.cs.utexas.edu/~vijay/teaching/project1.tar.gz
 ```
-The download may appear to stall or hang for a couple minutes after reaching 100%. You should wait until the terminal prompt returns, as cancelling the download at this point may corrupt the image.
+The download may appear to stall or hang for a couple minutes after reaching 100%. You should wait until the terminal prompt returns, as cancelling the download early may corrupt the image.
 
 2. Now start up a VM that listens on a specific port using the following command. To avoid contention over ports, use `<port-id> = 5900 + <team-number>`. For example, if your group-id is 15, your port-id will be 5915.
 ```
