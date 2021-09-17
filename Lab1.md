@@ -39,7 +39,7 @@ The first method you will be editing is `vmx_check_support()` in `vmm/vmx.c`. Th
 
 6. From [this Intel guide](https://www.cs.utexas.edu/~vijay/cs378-f17/projects/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf), find out what the `vmcs` pointer in this struct stands for, and what it purpose it serves. 
 
-7. What assembly instruction initializes the `vmcs` pointer? 
+7. What assembly instruction initializes the `vmcs` pointer? In other words, how do we change the `vmcs` pointer? 
 
 ## Part-2 Coding Assignment (Making a Guest Environment)
 
