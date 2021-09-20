@@ -1,0 +1,1 @@
+   -O0 -fno-builtin -I. -MD -fno-omit-frame-pointer -mno-red-zone -Wall -Wno-format -Wno-unused -Werror -gdwarf-2 -I./net/lwip/include -I./net/lwip/include/ipv4 -I./net/lwip/jos -fno-stack-protector -DJOS_USER -gdwarf-2 -mcmodel=large -m64 -DVMM_GUEST
