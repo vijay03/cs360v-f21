@@ -92,7 +92,7 @@ Once this is complete, the kernel will attempt to run the guest, and will panic 
 kernel panic on CPU 0 at ../vmm/vmx.c:637: asm_vmrun is incomplete
 ```
 
-### Part-3 vmlaunch and vmresume
+### Part-4 vmlaunch and vmresume
 
 In this exercise, you will use the assembly code below to complete the `asm_vmrun()` that launches the VM.
 The code below will help you use the vmwrite instruction to set the host stack pointer,
