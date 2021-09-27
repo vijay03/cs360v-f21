@@ -107,7 +107,7 @@ Skim Chapter 26 of the [Intel manual](http://www.cs.utexas.edu/~vijay/cs378-f17/
 to familiarize yourself with the vmlaunch and vmresume instructions. 
 Remove the panic in the call to `asm_vmrun()`. There are instructions in the code of what lines you must add or fix. 
 
-There are several places you need to add to in this function. All are labeled in the codebase with "Your code here"
+There are several places you need to add to in this function. All are labeled in the codebase with "Your code here". Do not modify any of the provided assembly code.
 
 1. The first instruction can be found in the Intel manual, linked above. The instruction needs to set the VMCS rsp to the current top of the frame. 
 2. The second instruction needs to check if vmlaunch (env-runs = 1) or vmresume (env-runs > 1) is needed, set the condition code appropriately for use below.
