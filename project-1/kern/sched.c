@@ -5,6 +5,8 @@
 #include <kern/env.h>
 #include <kern/pmap.h>
 #include <kern/monitor.h>
+#include <inc/error.h>
+#include <inc/memlayout.h>
 
 void sched_halt(void);
 
@@ -46,8 +48,14 @@ sched_yield(void)
 	for (j = 1; j <= NENV; j++) {
 		k = (j + i) % NENV;
 		// If this environment is runnable, run it.
-		if (envs[k].env_status == ENV_RUNNABLE) {
-            /* Your code here */
+		if ( envs[i].env_status == ENV_RUNNABLE
+		  && envs[i].env_type == ENV_TYPE_GUEST )  {
+            uint8_t ret = vmxon();
+			if ( ret ) {
+				page_decref( pa2page(PADDR(thiscpu->vmxon_region)) ); 	// translating address from KVA to pageinfo
+				envs[i].env_status = ENV_DYING;
+				return;
+			}
 			env_run(&envs[k]);
 		}
 	}
