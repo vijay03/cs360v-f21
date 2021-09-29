@@ -56,6 +56,8 @@ The hints for implementing these functions are present as comments in the code.
 
 Don't forget to error check! 
 
+You should not implement `ept_page_insert()` as part of this lab; it will be implemented in a later lab.
+
 At this point, you have enough host-level support function to map the guest bootloader and kernel into the guest VM.
 For mapping the guest bootloader and kernel, you will need to read the kernel's ELF headers and copy the segments into the guest.
 
