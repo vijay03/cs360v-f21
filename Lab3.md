@@ -45,7 +45,7 @@ Implement the `VMX_VMCALL_MBMAP` case of the function `handle_vmcall()` in `vmm/
 ![Image of Map](https://github.com/abbykrish/cs360v-f21/blob/main/figures/memmap.jpg)
 
 
-This section mostly involves accurately setting up all of the metadata of the memory map 
+Set the flags, size, and address fields of the `mbinfo` struct to the correct values.
 
 You will need to make `memory_map_t` objects for each of the sections specified in the diagram above, and write them into the mbinfo memory using the memset or memcpy functions. Look in the multiboot.h file to see all the fields in each of the struct you need to fill out. 
 
