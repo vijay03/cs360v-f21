@@ -8,7 +8,7 @@ Similar to issuing a system call (e.g., using the int or syscall instruction), a
 Deadline: Thursday Oct 14
 ```
 
-#### Part-2 Pre-lab Questions
+### Part-2 Pre-lab Questions
 1. Name 3 different events that might cause a vmexit. You can look through some of the reasons in `vmm/vmx.c`, but it may be easier to reason this from your knowledge of operating systems and virtual machines 
 2. What overhead costs exist when you do a VM exit?
 	2a. Give an example in the codebase of one of these computation costs. Provide the function and file, and an explanation
@@ -19,11 +19,11 @@ Recommended files to look through before starting:
 
 `kern/multiboot.h` has some of the objects that will helpful for the memory multi boot map 
 
-### Part-4 Checking exit reason
+### Part-3 Checking exit reason
 
 Complete the implementation of `vmexit()` by identifying the reason for the exit from the VMCS. You may need to search Chapter 27 of the [Intel manual](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf) to solve this part of the exercise.
 
-#### Part-3 Multi-boot map (aka e820)
+#### Part-4 Multi-boot map (aka e820)
 
 JOS is "told" the amount of physical memory it has by the bootloader. JOS's bootloader passes the kernel a multiboot info structure which possibly contains the physical memory map of the system. The memory map may exclude regions of memory that are in use for reasons including IO mappings for devices (e.g., the "memory hole"), space reserved for the BIOS, or physically damaged memory. For more details on how this structure looks and what it contains, refer to the [specification](https://www.gnu.org/software/grub/manual/multiboot/multiboot.html). A typical physical memory map for a PC with 10 GB of memory looks like below.
 ```
@@ -52,7 +52,7 @@ You will need to make `memory_map_t` objects for each of the sections specified 
 FOR EXAMPLE: after you have initialized all the data in each struct, you can initialize the sections like this:` memcpy(addr, &lomap, sizeof(memory_map_t));`
 
 
-#### Part-4 CPUID
+#### Part-5 CPUID
 
 Once the guest gets a little further in boot, it will attempt to discover whether the CPU supports long mode, using the cpuid instruction. Our VMCS is configured to trap on this instruction, so that we can emulate it---hiding the presence of vmx, since we have not implemented emulation of vmx in software. Now you will see an error of the form `kernel panic on CPU 0 at ../vmm/vmexits.c:262: cpuid not implemented`.
 
