@@ -4,8 +4,6 @@ The equivalent event to a trap from an application to the operating system is ca
 
 Similar to issuing a system call (e.g., using the int or syscall instruction), a guest can programmatically trap to the host using the vmcall instruction (sometimes called hypercalls). The current JOS guest uses three hypercalls: one to read the e820 map, which specifies the physical memory layout to the OS; and two to use host-level IPC. We will handle the first hypercall in this lab.
 
-Complete the implementation of `vmexit()` by identifying the reason for the exit from the VMCS. You may need to search Chapter 27 of the [Intel manual](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf) to solve this part of the exercise.
-
 ```diff
 Deadline: Thursday Oct 14
 ```
@@ -21,6 +19,9 @@ Recommended files to look through before starting:
 
 `kern/multiboot.h` has some of the objects that will helpful for the memory multi boot map 
 
+### Part-4 Checking exit reason
+
+Complete the implementation of `vmexit()` by identifying the reason for the exit from the VMCS. You may need to search Chapter 27 of the [Intel manual](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf) to solve this part of the exercise.
 
 #### Part-3 Multi-boot map (aka e820)
 
