@@ -139,6 +139,7 @@ Submit a zip of your files via Canvas. If you have changed the directory structu
 ## Grading Rubric
 
 Total: 20 points
+
 Each part 5 points, total of 4 parts. 
 
 ## Contact Details
