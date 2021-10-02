@@ -103,7 +103,7 @@ as well as the vmlaunch and vmresume instructions to start the VM.
 In order to facilitate interaction between the guest and the JOS host kernel, we copy the guest register state into the environment's Trapframe structure.
 Thus, you will also write assembly to copy the relevant guest registers to and from this trapframe struct.
 
-Please remember, prior to starting this section, that your code from Lab 0 that implemented env-runs is correct and complete. Please refer to the TA if you did not recieve full marks. 
+Please remember, prior to starting this section, that your code from Lab 0 that implemented env-runs is correct and complete. Please refer to the TA if you did not recieve full points. 
 
 Skim Chapter 26 of the [Intel manual](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf)
 to familiarize yourself with the vmlaunch and vmresume instructions. 
@@ -124,7 +124,24 @@ Because the host isn't handling traps from the guest yet, the VM will be termina
 Unhandled VMEXIT, aborting guest.
 ```
 
-### Submission and Deadline
+## Hints
+
+In all lab assignments in project-1, the functions you will be implementing might have hints on how to implement them as comments above. So please pay attention to the comments in the code.
+
+## Deadline
 
 The deadline is **Sep 30** for on-campus students, and **Oct 24** for online masters students.
+
+## Submission Details
+
+Submit a zip of your files via Canvas. If you have changed the directory structure, add a README explaining where we can find your code. Add a text file or a PDF file explaining your answers to the pre-lab questions. Optionally, you can add a text file explaining how you modified the code. 
+
+## Grading Rubric
+
+Total: 20 points
+Each part 5 points, total of 4 parts. 
+
+## Contact Details
+
+Reach out to the TA in case of any difficulties. You can post a public question on Piazza: chances are, your fellow students have already seen it and can help you. If you want to share code with the TAs, use a private Piazza question.
 
