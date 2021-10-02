@@ -126,6 +126,5 @@ Unhandled VMEXIT, aborting guest.
 
 ### Submission and Deadline
 
-Please submit your code for part-1 and part-2.
-The deadline for lab-2 of project-1 is **Sep 30**. 
+The deadline is **Sep 30** for on-campus students, and **Oct 24** for online masters students.
 
