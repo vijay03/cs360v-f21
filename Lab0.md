@@ -29,7 +29,7 @@ You need to use Virtual Machine software: VMWare Fusion [here for students](http
 
 We are providing the virtual machine in two formats. You can use either for the class. 
 1. A zip file for a VirtualBox virtual machine. This has all the components required for the virtual machine to be run on Virtualbox. You might need to customize it to run correctly on your laptop. Link: https://utexas.box.com/s/nkwnzmqwnpo8m9jf1m4m82p351b4rb6o. This has the host-only networking adaptor setup, but you have to use VirtualBox to run this virtual machine.
-2. An OVA file: https://utexas.box.com/s/z2p0bz1z352rtg4zpwkv7l2hn9vnc81a. You must setup a VM using this OVA file. You can use either VirtualBox or VMware Fusion. We are providing this OVA for compatibility, but it requires you to setup a lot of stuff that comes pre-configured on the VirtualBox. We strongly recommend using the VirtualBox VM. 
+2. An OVA file: https://utexas.box.com/s/evzdr3ov7y1r6cpy5wm1epn97p2v1mfq. You must setup a VM using this OVA file. You can use either VirtualBox or VMware Fusion. We are providing this OVA for compatibility, but it requires you to setup a lot of stuff that comes pre-configured on the VirtualBox. We strongly recommend using the VirtualBox VM. 
 
 To successfully run JOS inside the VM, you need to ensure that Virtualization hardware support (VMX) is enabled for the virtual machine, and KVM is installed in the virtual machine. Both these steps are done in the VirtualBox, but you will have to configure it yourself when using the OVA. 
 

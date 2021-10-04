@@ -33,7 +33,7 @@ The first method you will be editing is `vmx_check_support()` in `vmm/vmx.c`. Th
 
 3. What are the results of eax, ecx, and ebx values in hexadecimal? Hint: [you can print program variables from GDB](https://sourceware.org/gdb/current/onlinedocs/gdb/Variables.html)
 
-4. Now examine the values of these variables as strings. Hint: look at the values in hexadecimal and translate them to strings, in the order `ebx, ecx, edx`. What do you observe? The [Wikipedia page](https://en.wikipedia.org/wiki/CPUID) for the `cpuid` instruction may help you interpret this output.
+4. Now examine the values of these variables as strings. Hint: look at the values in hexadecimal and translate them to strings, in the order `ebx, edx, ecx`. What do you observe? The [Wikipedia page](https://en.wikipedia.org/wiki/CPUID) for the `cpuid` instruction may help you interpret this output.
 
 5. There is a reference in each `Env` struct for another struct called `VmxGuestInfo`. What kind of information does this struct hold? 
 

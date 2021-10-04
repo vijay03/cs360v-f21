@@ -36,7 +36,7 @@ What is this function doing? It is described in the function header, but try to 
 
 4. In our codebase, load_icode() does the work of loading the ELF binary image into the environment's user memory. Looking at this function, where does the memory for the Env get allocated? Where does the memory for the ELF header get allocated? Hint: you may have to check out what some constant values mean. 
 
-5. The first function you implement in this project will have you check many errors, prior to the actual function logic. What are some of the reasons why we must do this in OS level code, the user never sees? 
+5. The first function you implement in this project will have you check many errors, prior to the actual function logic. What are some of the reasons why we must do this in OS level code that the user never sees? 
 
 Recommended files to look through before starting:
 
@@ -55,6 +55,8 @@ Once this is complete, you should have complete support for nested paging.
 The hints for implementing these functions are present as comments in the code.
 
 Don't forget to error check! 
+
+You should not implement `ept_page_insert()` as part of this lab; it will be implemented in a later lab.
 
 At this point, you have enough host-level support function to map the guest bootloader and kernel into the guest VM.
 For mapping the guest bootloader and kernel, you will need to read the kernel's ELF headers and copy the segments into the guest.
@@ -92,7 +94,7 @@ Once this is complete, the kernel will attempt to run the guest, and will panic 
 kernel panic on CPU 0 at ../vmm/vmx.c:637: asm_vmrun is incomplete
 ```
 
-### Part-3 vmlaunch and vmresume
+### Part-4 vmlaunch and vmresume
 
 In this exercise, you will use the assembly code below to complete the `asm_vmrun()` that launches the VM.
 The code below will help you use the vmwrite instruction to set the host stack pointer,
@@ -101,17 +103,19 @@ as well as the vmlaunch and vmresume instructions to start the VM.
 In order to facilitate interaction between the guest and the JOS host kernel, we copy the guest register state into the environment's Trapframe structure.
 Thus, you will also write assembly to copy the relevant guest registers to and from this trapframe struct.
 
-Please remember, prior to starting this section, that your code from Lab 0 that implemented env-runs is correct and complete. Please refer to the TA if you did not recieve full marks. 
+Please remember, prior to starting this section, that your code from Lab 0 that implemented env-runs is correct and complete. Please refer to the TA if you did not recieve full points. 
 
 Skim Chapter 26 of the [Intel manual](http://www.cs.utexas.edu/~vijay/cs378-f17/projects/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf)
 to familiarize yourself with the vmlaunch and vmresume instructions. 
 Remove the panic in the call to `asm_vmrun()`. There are instructions in the code of what lines you must add or fix. 
 
-There are 3 places you need to add to in this function. Both are labeled in the codebase with "Your code here"
+There are several places you need to add to in this function. All are labeled in the codebase with "Your code here". Do not modify any of the provided assembly code.
 
 1. The first instruction can be found in the Intel manual, linked above. The instruction needs to set the VMCS rsp to the current top of the frame. 
 2. The second instruction needs to check if vmlaunch (env-runs = 1) or vmresume (env-runs > 1) is needed, set the condition code appropriately for use below.
-3. The last code to write will require a set of instructions. You must check the result of the condition flag, you set in step 2, and execute either the vmlaunch or the vmresume. This will require making use of conditional jumps. 
+3. Write a set of instructions to load in guest general purpose registers from the trap frame. Be careful not to overwrite the condition code you set in the previous step.
+4. Write a set of instructions to check the result of the condition flag you set in step 2, and execute either the vmlaunch or the vmresume. This will require making use of conditional jumps. 
+5. Write a set of instructions to write general purpose guest registers and cr2 register from the guest to the trapframe. In this part, be careful that the total number of pushes and pops in the inline assembly here are equal; you may need to add pop(s) to make sure this holds.
 
 Once this is complete, you should be able to run the VM until the guest attempts a vmcall instruction, which traps to the host kernel.
 Because the host isn't handling traps from the guest yet, the VM will be terminated. You should see an error like:
@@ -120,8 +124,25 @@ Because the host isn't handling traps from the guest yet, the VM will be termina
 Unhandled VMEXIT, aborting guest.
 ```
 
-### Submission and Deadline
+## Hints
 
-Please submit your code for part-1 and part-2.
-The deadline for lab-2 of project-1 is **Sep 30**. 
+In all lab assignments in project-1, the functions you will be implementing might have hints on how to implement them as comments above. So please pay attention to the comments in the code.
+
+## Deadline
+
+The deadline is **Sep 30** for on-campus students, and **Oct 24** for online masters students.
+
+## Submission Details
+
+Submit a zip of your files via Canvas. If you have changed the directory structure, add a README explaining where we can find your code. Add a text file or a PDF file explaining your answers to the pre-lab questions. Optionally, you can add a text file explaining how you modified the code. 
+
+## Grading Rubric
+
+Total: 20 points
+
+Each part 5 points, total of 4 parts. 
+
+## Contact Details
+
+Reach out to the TA in case of any difficulties. You can post a public question on Piazza: chances are, your fellow students have already seen it and can help you. If you want to share code with the TAs, use a private Piazza question.
 
