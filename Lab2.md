@@ -96,6 +96,8 @@ kernel panic on CPU 0 at ../vmm/vmx.c:637: asm_vmrun is incomplete
 
 ### Part-4 vmlaunch and vmresume
 
+### NOTE: this section is only required for in-person sections of the class. If you are in the online Master's program, see Piazza for the implementation for this section.
+
 In this exercise, you will use the assembly code below to complete the `asm_vmrun()` that launches the VM.
 The code below will help you use the vmwrite instruction to set the host stack pointer,
 as well as the vmlaunch and vmresume instructions to start the VM.
