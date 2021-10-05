@@ -130,6 +130,15 @@ Unhandled VMEXIT, aborting guest.
 
 In all lab assignments in project-1, the functions you will be implementing might have hints on how to implement them as comments above. So please pay attention to the comments in the code.
 
+## FAQ
+
+1. Is srcva a kernel virtual address? - No. The srcva that is passed into `sys_ept_map()` is not a kernel virtual address. If you want to get the kernel virtual address associated with a srcva, you can look up the PageInfo struct associated with srcva, then look up the kernel virtual address for that PageInfo struct.
+2. How can I check if srcva is read-only? - Permissions are set on page table (or extended page table) entries by bitwise AND-ing the entry with some permission bits. There are constants defined in inc/mmu.h and inc/ept.h that correspond to different permissions settings for page table and extended page table entries respectively. You can look up the page table entry for srcva and check its permissions using bitwise operations on the permissions constants and the page table entry. This is also how to work with permissions on extended page table entries
+3. How do I check if an address is page-aligned? - An address is page-aligned when it is a multiple of the page size. There are macros and constants defined in inc/mmu.h and inc/types.h that will help you check if an address is a multiple of the page size.
+4. What are the possible values of `perm`? - The possible values of perm (for `sys_ept_map()`; other permissions may be set for other situations in the codebase) are defined in inc/ept.h.
+5. How are `EPTE_ADDR` and `EPTE_FLAGS` used? - `EPTE_ADDR` and `EPTE_FLAGS` are used in the first few functions defined in vmm/ept.c, which are used to convert EPT entries to their corresponding physical or virtual addresses or to get the flags of an EPT entry. The `epte_addr()` and `epte_page_vaddr()` functions will be useful for this lab; you shouldn't have to deal with EPT entry flags here.
+6. What does `ADDR_TO_IDX(pa, n)` do and what is the `n` parameter? - `ADDR_TO_IDX(pa, n)` returns the index corresponding to physical address pa in the nth level of the page table. You can get an idea of how it can be used by looking in the `test_ept_map()` function at the bottom of vmm/ept.c. You should definitely use this macro in your solution.
+
 ## Deadline
 
 The deadline is **Sep 30** for on-campus students, and **Oct 24** for online masters students.
