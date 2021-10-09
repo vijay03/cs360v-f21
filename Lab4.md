@@ -1,15 +1,15 @@
 ## Handling VM exits - part 2
-In the last lab we implemented the memory map portion of `handle_vmcall()`. Now we will handle the other 2 cases. 
+In the last lab we implemented the memory map portion of `handle_vmcall()`. Now we will handle the other 2 cases. Before starting this lab, read the documentation on JOS's file system: [here](https://github.com/vijay03/cs360v-f21/blob/master/file_system.md)
 
 ```diff
 Deadline: Tue Oct 26
 ```
 
 #### Part-1 Pre-lab 
-1. An easy way we can help prevent code duplication is by using macros in functions. In many of the hypercalls we have in JOS, we need to differentiate when we are running in the guest or host. Give an example of a C program that adds up all the numbers in an array when the macro is set, and multiplies them when the macro is not set. 
-2. Read through the explanation of the file system [here](https://github.com/vijay03/cs360v-f20/blob/master/file_system.md). As you may read, in order to create access for the guests into the file_system, we must abstract RPC calls on top of the JOS's IPC mechanism. (Something that goes over an RPC call. Maybe runs a little python script to demonstrate the concept and bring that back to how the file system runs with host read and write. WIP) 
-3. Two functions that will be important in this project are `ipc_host_send()` and `ipc_host_recv()`. They use vmcalls. Set a breakpoint at these functions and explain their workflows, to successful issue the send and recieve. 
-4. After completing the lab, provide a simple diagram (you can just use function names and arrows) of the workflow of the functions that get called when a guest VM tries to read from a file. 
+1. An easy way we can help prevent code duplication is by using macros in functions. We saw one example of this in Lab 1 with the `VMM_GUEST` macro. In many of the hypercalls we have in JOS, we need to differentiate when we are running in the guest or host. Give an example of a C program that adds up all the numbers in an array when the macro is set, and multiplies them when the macro is not set. 
+<!-- 2. Read through the explanation of the file system [here](https://github.com/vijay03/cs360v-f20/blob/master/file_system.md). As you may read, in order to create access for the guests into the file_system, we must abstract RPC calls on top of the JOS's IPC mechanism. (Something that goes over an RPC call. Maybe runs a little python script to demonstrate the concept and bring that back to how the file system runs with host read and write. WIP)  --> 
+2. Two functions that will be important in this project are `ipc_host_send()` and `ipc_host_recv()`. They use vmcalls. Set a breakpoint at these functions and explain the workflow they use to send and receive. 
+3. After completing the lab, provide a simple diagram (you can just use function names and arrows) of the workflow of the functions that get called when a guest VM tries to read from a file. 
 
 
 #### Part-2 Multi-boot map (aka e820)
