@@ -26,17 +26,18 @@ You will need to do 4 tasks
 
 
 The workflow (and hints) for the ipc_* functions is as follows:
-
-1. `handle_vmcall()`: 
+1. `ipc_host_send()` checks whether pg is NULL. If it is, it sets the pg to UTOP. Then this function gets the gpa corresponding to pg and does a vmcall to VMX_VMCALL_IPCSEND by setting the corresponding registers in the guest. Delete the `while` loop and replace it with the vmcall.
+2. 
+3. `handle_vmcall()`: 
 	- The `VMX_VMCALL_IPCSEND` portion should load the values from the trapframe registers. 
 	- Then it ensures that the destination environment is HOST FS. If the destination environment is not HOST FS, then this function returns E_INVAL. 
 	- Now, this function traverses all the environments, and sets the `to_env` to the environment ID corresponding to ENV_TYPE_FS at the host. After this is done, it converts the gpa to hva (there's a function for this!) and then calls `sys_ipc_try_send()`
 	- The `VMX_VMCALL_IPCRECV` portion just calls `sys_ipc_recv()`, after incrementing the program counter.
-2. `sys_ipc_try_send()` checks whether the guest is sending a message to the host or whether the host is sending a message to the guest. 
+4. `sys_ipc_try_send()` checks whether the guest is sending a message to the host or whether the host is sending a message to the guest. 
 	- If the curenv type is GUEST and the destination va is below UTOP, it means that the guest is sending a message to the host and it should insert a page in the host's page table. 
 	- If the dest environment is GUEST and the source va is below UTOP, it means that the host is sending a message to the guest and it should insert a page in the EPT. 
 	- Finally, at the end of this function, if the dest environment is GUEST, then the rsi register of the trapframe should be set with 'value'.
-3. `ept_page_insert()` uses `ept_lookup_gpa` to traverse the EPT and insert a page if not present.
+5. `ept_page_insert()` uses `ept_lookup_gpa` to traverse the EPT and insert a page if not present.
 	- You will find functions like `epte_present()`, `epte_addr()`, `pa2page()` to be helpful.
 	- You will also need to update the reference counts of the PageInfo struct of the page you insert. There are more details about this in the comment above the function. 
 
