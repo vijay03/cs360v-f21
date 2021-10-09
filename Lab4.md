@@ -40,6 +40,8 @@ The workflow (and hints) for the ipc_* functions is as follows:
 	- You will find functions like `epte_present()`, `epte_addr()`, `pa2page()` to be helpful.
 	- You will also need to update the reference counts of the PageInfo struct of the page you insert. There are more details about this in the comment above the function. 
 
+Be sure to check the return values of any functions you call for errors.
+
 Once these steps are complete, you should have a fully running JOS-on-JOS.
 This marks the end of project-1.
 
