@@ -19,7 +19,7 @@ Recall that JOS uses three hypercall (vmcall) instructions, the first one of whi
 
 You will need to do 4 tasks 
 
-1. You need to modify the `bc_pgfault()` amd `flush_block()` in fs/bc.c to issue I/O requests using the `host_read()` and `host_write()` hypercalls, instead of the functions they usually use. Use the macro VMM_GUEST to select different behavior for the guest and host OS. 
+1. You need to modify the `bc_pgfault()` amd `flush_block()` in fs/bc.c to issue I/O requests using the `host_read()` and `host_write()` hypercalls, instead of the functions they usually use. Use the macro VMM_GUEST to select different behavior for the guest and host OS. Once this is done, you should use a user panic with the message "ipc_host_send not implemented."
 2. You will also have to implement the IPC send and receive hypercalls in `handle_vmcall()` (case VMX_VMCALL_IPCSEND and VMX_VMCALL_IPCRECV), as well as the client code to issue `ipc_host_send()` and `ipc_host_recv()` vmcalls in lib/ipc.c.
 3. You will need to extend the `sys_ipc_try_send()` to detect whether the environment is of type `ENV_TYPE_GUEST` or not. 
 4. You need to implement the `ept_page_insert()` function.
