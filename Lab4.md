@@ -20,15 +20,24 @@ Recall that JOS uses three hypercall (vmcall) instructions, the first one of whi
 
 You will need to do 4 tasks 
 
-1. You need to modify the `bc_pgfault()` amd `flush_block()` in fs/bc.c to issue I/O requests using the `host_read()` and `host_write()` hypercalls, instead of the functions they usually use. Use the macro VMM_GUEST to select different behavior for the guest and host OS. 
-2. You will also have to implement the IPC send and receive hypercalls in `handle_vmcall()` (case VMX_VMCALL_IPCSEND and VMX_VMCALL_IPCRECV), as well as the client code to issue `ipc_host_send()` and `ipc_host_recv()` vmcalls in lib/ipc.c.
-3. You will need to extend the `sys_ipc_try_send()` to detect whether the environment is of type `ENV_TYPE_GUEST` or not. 
-4. You need to implement the `ept_page_insert()` function.
+1. You need to modify the `bc_pgfault()` amd `flush_block()` in fs/bc.c to issue I/O requests using the `host_read()` and `host_write()` hypercalls, instead of the functions they usually use, when a guest environment is running. Use the macro VMM_GUEST to select different behavior for the guest and host OS. 
+<!-- 2. You will also have to implement the IPC send and receive hypercalls in `handle_vmcall()` (case VMX_VMCALL_IPCSEND and VMX_VMCALL_IPCRECV), as well as the client code to issue `ipc_host_send()` and `ipc_host_recv()` vmcalls in lib/ipc.c. -->
+2. You will need to complete
+	- `ipc_host_send()` and `ipc_host_recv()` in lib/ipc.c to issue vmcalls (**in-person section only! Online Master's students please see Piazza**)
+	- implement the IPC send and receive hypercalls in `handle_vmcall()` (cases `VMX_VMCALL_IPCSEND` and `VMX_VMCALL_IPCRECV`) (**all students**).
+4. You will need to extend the `sys_ipc_try_send()` to detect whether the environment is of type `ENV_TYPE_GUEST` or not. 
+5. You need to implement the `ept_page_insert()` function.
 
+
+The following is a description of register usage by the vmcalls you will be working with. You should use these registers when you implement the vmcalls in `ipc_host_send()` and `ipc_host_recv()` and in `handle_vmcall()`. 
+- The `VMX_VMCALL_IPCSEND` vmcall places its return value into %rax and expects the following input:
+	- The envid of the destination env in %rbx
+	- The value to send in %rcx
+	- The physical address of a page to send in %rdx
+	- The permissions for the sent page in %rsi
+- The `VMX_VMCALL_IPCRECV` vmcall places its return value into %rax and the received value into %rsi. It expects the destination address for a received page in %rbx. 
 
 The workflow (and hints) for the ipc_* functions is as follows:
-<!-- 1. `ipc_host_send()` checks whether pg is NULL. If it is, it sets the pg to UTOP. Then this function gets the gpa corresponding to pg and does a vmcall to VMX_VMCALL_IPCSEND by setting the corresponding registers in the guest. Delete the `while` loop and replace it with the vmcall.
-2.  -->
 1. `handle_vmcall()`: 
 	- The `VMX_VMCALL_IPCSEND` portion should load the values from the trapframe registers. 
 	- Then it ensures that the destination environment is HOST FS. If the destination environment is not HOST FS, then this function returns E_INVAL. 
