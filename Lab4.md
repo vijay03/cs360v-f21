@@ -29,7 +29,7 @@ You will need to do 4 tasks
 5. You need to implement the `ept_page_insert()` function.
 
 
-The following is a description of register usage by the vmcalls you will be working with. You should use these registers when you implement the vmcalls in `ipc_host_send()` and `ipc_host_recv()` and in `handle_vmcall()`. 
+The following is a description of register usage by the vmcalls you will be working with. You should use these registers when you implement the vmcalls in `ipc_host_send()` and `ipc_host_recv()` and in `handle_vmcall()`. Read the documentation for `sys_ipc_try_send()` and `sys_ipc_try_recv()` in kern/syscall.c to understand what these values are used for.
 - The `VMX_VMCALL_IPCSEND` vmcall places its return value into %rax and expects the following input:
 	- The envid of the destination env in %rbx
 	- The value to send in %rcx
