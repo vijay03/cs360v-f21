@@ -35,7 +35,7 @@ The following is a description of register usage by the vmcalls you will be work
 	- The value to send in %rcx
 	- The physical address of a page to send in %rdx
 	- The permissions for the sent page in %rsi
-- The `VMX_VMCALL_IPCRECV` vmcall places its return value into %rax and the received value into %rsi. It expects the destination address for a received page in %rbx. 
+- The `VMX_VMCALL_IPCRECV` vmcall places its error code into %rax and the received value into %rsi. It expects the destination address for a received page in %rbx. 
 
 The workflow (and hints) for the ipc_* functions is as follows:
 1. `handle_vmcall()`: 
