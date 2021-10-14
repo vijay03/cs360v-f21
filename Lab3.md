@@ -12,7 +12,7 @@ Deadline: Thursday Oct 14
 1. Name 3 different events that might cause a vmexit. You can look through some of the reasons in `vmm/vmx.c`, but it may be easier to reason this from your knowledge of operating systems and virtual machines 
 2. What overhead costs exist when you do a VM exit?
 	2a. Give an example in the codebase of one of these computation costs. Provide the function and file, and an explanation
-3. Recall that the %cr3 register holds the physical address of a page table. An OS kernel needs to change %cr3 during context switches to switch page tables. Does our VM, which has hardware supported page tables for virtual machines also have to do this? GDB does not display the %cr3 register, but you can check it using the QEMU monitor (see the [tools.md](https://github.com/vijay03/cs360v-f21/blob/main/tools.md#patched-gdb) doc).
+3. Recall that the %cr3 register holds the physical address of a page table. An OS kernel needs to change %cr3 during context switches to switch page tables. Does our VM, which has hardware supported page tables for virtual machines also have to do this? GDB does not display the %cr3 register, but you can check it using the QEMU monitor (see the [tools.md](https://github.com/vijay03/cs360v-f21/blob/main/tools.md#patched-gdb) doc) before and after a vmexit is issued.
 6. In Part-3 of this project, you will be responsible for filling in pieces in the codebase to boot the VM. What is a bootloader? How do we ensure isolation between machines booting in memory? 
 
 Recommended files to look through before starting:
