@@ -4,10 +4,6 @@ The equivalent event to a trap from an application to the operating system is ca
 
 Similar to issuing a system call (e.g., using the int or syscall instruction), a guest can programmatically trap to the host using the vmcall instruction (sometimes called hypercalls). The current JOS guest uses three hypercalls: one to read the e820 map, which specifies the physical memory layout to the OS; and two to use host-level IPC. We will handle the first hypercall in this lab.
 
-```diff
-Deadline: Thursday Oct 14
-```
-
 ### Part-2 Pre-lab Questions
 1. Name 3 different events that might cause a vmexit. You can look through some of the reasons in `vmm/vmx.c`, but it may be easier to reason this from your knowledge of operating systems and virtual machines 
 2. What overhead costs exist when you do a VM exit?
