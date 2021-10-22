@@ -60,6 +60,3 @@ Implement `handle_cpuid()` in vmm/vmexits.c. `handle_cpuid()` should emulate a c
 
 Please submit your code for part-1 and part-2 via gitolite. To mark your submission, please have a commit labelled "Lab 3 submission. 0/1/.. slip days used.". You can modify and add a dummy file for this commit if you want. We will consider the last such commit for evaluation. The deadline for lab-3 of project-1 is:
 
-```diff
-Deadline: Thursday Oct 14
-```
