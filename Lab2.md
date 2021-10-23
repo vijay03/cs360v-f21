@@ -149,7 +149,13 @@ Submit a zip of your files via Canvas. If you have changed the directory structu
 
 Total: 20 points
 
-Each part 5 points, total of 4 parts. 
+Rubric for on-campus students:
+- Each part 5 points, total of 4 parts. 
+
+Rubric for Online Masters students:
+- 5 points for prelab
+- 8 points for part 2
+- 7 points for part 3
 
 ## Contact Details
 
