@@ -43,7 +43,7 @@ The workflow (and hints) for the ipc_* functions is as follows:
 	- If the curenv type is GUEST and the destination va is below UTOP, it means that the guest is sending a message to the host and it should insert a page in the host's page table. 
 	- If the dest environment is GUEST and the source va is below UTOP, it means that the host is sending a message to the guest and it should insert a page in the EPT. 
 	- Finally, at the end of this function, if the dest environment is GUEST, then the rsi register of the trapframe should be set with 'value'.
-3. `ept_page_insert()` uses `ept_lookup_gpa` to traverse the EPT and insert a page if not present.
+3. `ept_page_insert()` uses `ept_lookup_gpa` to traverse the EPT and insert a page. If there is already a page at the given guest physical address, be sure to decrement its reference count before overwriting the mapping. 
 	- You will find functions like `epte_present()`, `epte_addr()`, `pa2page()` to be helpful.
 	- You will also need to update the reference counts of the PageInfo struct of the page you insert. There are more details about this in the comment above the function. 
 
