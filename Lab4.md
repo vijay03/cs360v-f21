@@ -65,6 +65,7 @@ Submit a zip of your files via Canvas. If you have changed the directory structu
 Total: 20 points
 
 Pre-lab: 4 points
+
 4 coding tasks, each 4 point
 
 ## Contact Details
