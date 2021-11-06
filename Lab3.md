@@ -55,6 +55,12 @@ Once the guest gets a little further in boot, it will attempt to discover whethe
 
 Implement `handle_cpuid()` in vmm/vmexits.c. `handle_cpuid()` should emulate a cpuid instruction. Check out the comments in the code for more hints. Once the host can emulate the cpuid instruction, your guest should run until it attempts to perform disk I/O, giving a user panic of the form `ipc_host_send not implemented.`
 
+## FAQ 
+
+1. What tests should pass after Lab 3? - The VMX extension should pass, in addition to the sys_ept_tests and the start vmxon tests from Lab 2. 
+2. What is the difference between `base_addr_low` and `base_addr_high`/`length_low` and `length_high` in `memory_map_t`? - `base_addr_low` should contain the lower (least significant) 32 bits of the section base address and `base_addr_high` should contain the upper 32 bits; same with section length. If the value to store can be represented with fewer than 32 bits, the `*_high` field should be zeroed out. 
+3. The autograding script is timing out - Increase the `timeout` argument on 389 of gradelib.py. 300 seconds should be enough for folks running on the department lab machines; if you are running on an older personal computer, you may need a larger timeout. 
+
 
 ## Deadline
 
