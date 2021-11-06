@@ -52,6 +52,16 @@ Be sure to check the return values of any functions you call for errors.
 Once these steps are complete, you should have a fully running JOS-on-JOS.
 This marks the end of project-1.
 
+## FAQ
+
+1.  If you are getting an error that looks like this:
+```
+user panic in fs at fs/bc.c:142: assertion failed: strcmp(diskaddr(1), "OOPS!\n") == 0
+```
+Make sure that `ipc_host_recv()` returns `val` if the receive was successful and `r` otherwise. Always returning `r` will cause this assertion to fail. 
+2. What is the "received value" that the IPC receive vmcall puts into `%rsi`? - The IPC send and receive calls always exchange a 32 bit value (given as an argument) as well as an optional page. 
+3. All of the autograding tests pass, but the output says "VMM Tests: Timeout!" - This is the expected behavior for a full solution. If JOS can start a VM properly, it will open up a shell in that VM. The autograder doesn't do anything with this shell, it just sits on it until it hits its timeout. 
+
 ## Deadline
 
 The deadline is **Oct 26** for on-campus students, and **Nov 28** for online masters students.
