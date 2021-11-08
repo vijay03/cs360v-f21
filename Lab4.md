@@ -27,7 +27,7 @@ You will need to do 4 tasks
 
 The following is a description of register usage by the vmcalls you will be working with. You should use these registers when you implement the vmcalls in `ipc_host_send()` and `ipc_host_recv()` and in `handle_vmcall()`. Read the documentation for `sys_ipc_try_send()` and `sys_ipc_try_recv()` in kern/syscall.c to understand what these values are used for.
 - The `VMX_VMCALL_IPCSEND` vmcall places its return value into %rax and expects the following input:
-	- The envid of the destination env in %rbx
+	- The type of the destination env in %rbx
 	- The value to send in %rcx
 	- The physical address of a page to send in %rdx
 	- The permissions for the sent page in %rsi
@@ -36,7 +36,7 @@ The following is a description of register usage by the vmcalls you will be work
 The workflow (and hints) for the ipc_* functions is as follows:
 1. `handle_vmcall()`: 
 	- The `VMX_VMCALL_IPCSEND` portion should load the values from the trapframe registers. 
-	- Then it ensures that the destination environment is HOST FS. If the destination environment is not HOST FS, then this function returns E_INVAL. 
+	- Then it checks the type of the destination environment. If the type is not HOST FS, this function returns E_INVAL.
 	- Now, this function traverses all the environments, and sets the `to_env` to the environment ID corresponding to ENV_TYPE_FS at the host. After this is done, it converts the gpa to hva (there's a function for this!) and then calls `sys_ipc_try_send()`
 	- The `VMX_VMCALL_IPCRECV` portion just calls `sys_ipc_recv()`, after incrementing the program counter.
 2. `sys_ipc_try_send()` checks whether the guest is sending a message to the host or whether the host is sending a message to the guest. 
