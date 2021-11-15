@@ -74,7 +74,13 @@ Submit a zip of your files via Canvas. If you have changed the directory structu
 
 Total: 20 points
 
-Each part 5 points, total of 4 parts. 
+part 1 Pre-lab: 4 points
+
+Part 2: 3 points
+
+Part 3: 10 points
+
+Part 4: 3 points
 
 ## Contact Details
 
