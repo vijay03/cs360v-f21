@@ -66,6 +66,9 @@ gg
 - How does gg ensure that communication between the user and the executing serverless functions is low?
 
 SAND
+- How does SAND achieve isolation between i) different serverless functions ii) different users?
+- How does the Hierarchical Message Queueing in SAND reduce latency for serverless functions?
 
-Shredder
-
+Storage Functions
+- What is the main idea behind storage functions?
+- How does Shredder achieve isolation among storage functions?
