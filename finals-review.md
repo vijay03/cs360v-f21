@@ -42,13 +42,25 @@ SCONE
 - SCONE implements its own threading -- what is the motivation behind this?
 
 Firecracker
-
+- How does Firecracker simplify the virtual machine monitor?
+- Describe how a lambda function is executed inside AWS, and Firecracker's place in that architecture 
 
 Unikernels
+- What is the main idea behind a unikernel?
+- In terms of generality, performance, and isolation, how does a unikernel compare to VMs and containers?
 
 Serverless
+- What is the main idea behind serverless functions?
+- Why do serverless functions make sense from the service provider's perspective?
+- What kind of applications are a good fit for the serverless paradigm? What kind of applications are a bad fit?
+- What is the main limitation when writing a serverless function?
+- What is an example for something that triggers the execution of a serverless function?
+- What is the cold start problem with serverless?
+- What is one way to deal with the cold start problem?
+- Can serverless functions communicate with each other?
 
 gg
+
 
 SAND
 
