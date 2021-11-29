@@ -60,7 +60,10 @@ Serverless
 - Can serverless functions communicate with each other?
 
 gg
-
+- What is the main idea behind gg?
+- What are applications that gg is not good for?
+- What is a thunk?
+- How does gg ensure that communication between the user and the executing serverless functions is low?
 
 SAND
 
