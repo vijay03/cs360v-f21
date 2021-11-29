@@ -13,6 +13,15 @@ Containers
 - What would be the problem with running each container in its own virtual machine?
 - How does chroot work?
 - How is a container different from a FreeBSD jail?
+- Can namespaces exist indepdent of containers? 
+- Can a container be associated with multiple namespaces?
+- Can different containers have processes with the same process ID? If so, how?
+- Why do containers need capabilities? 
+
+Container orchestration frameworks
+- What differentiates a pod from a container?
+- What does Kubernetes provide for a user over manually deploying containers?
+- How would two containers communicate with each other? What changes if there are both within the same pod? 
 
 LightVM
 
