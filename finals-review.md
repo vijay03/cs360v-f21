@@ -2,7 +2,7 @@ Review
 ======
 
 *This is review for the second half of the semester, for the online masters class following the schedule [here](https://github.com/vijay03/cs360v-f20/blob/master/schedule.md)*.
-*See [here](https://github.com/vijay03/cs360v-f21/blob/main/review-questions.md) for review questions about first half of the semeester.*
+*See [here](https://github.com/vijay03/cs360v-f21/blob/main/review-questions.md) for review questions about first half of the semester.*
 
 Containers
 - What motivated the creation of containers?
