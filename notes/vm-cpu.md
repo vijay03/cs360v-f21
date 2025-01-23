@@ -90,3 +90,4 @@
     * [Intel’s Virtualization Extensions (VT-x)](https://www.cs.dartmouth.edu/~sergey/cs258/2014/TorreyGuestLecture-Hypervors.pdf) by Jacob Torrey
     * [Analysis of the Intel Pentium’s Ability to Support a
 Secure Virtual Machine Monitor, USENIX Security 2009](https://www.usenix.org/legacy/publications/library/proceedings/sec2000/full_papers/robin/robin.pdf)
+   * [Kent Hall Virtualization slides](https://cs4118.github.io/www/2023-1/lect/virtualization_lecture.pdf)
